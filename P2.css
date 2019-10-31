@@ -16,7 +16,7 @@ a {     /* removes underline from nav bar links */
 
 @media (min-width: 1200px) {  /* keeps main front image/container size in check */
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 
@@ -147,8 +147,15 @@ a {     /* removes underline from nav bar links */
   border: 0;
 }
 
+
+/*Creates padding inside the white box.  Padding top creates a space in the top
+side of the box where you cannot put stuff.  Padding left for the left side, right
+for the right side etc.*/
 .p-5 {                      /* keeps clear box in shape */
-  padding: 19.5rem !important;
+  padding-top: 10rem!important;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-bottom: 10rem;
 }
 
 .mr-auto,                         /* keeps nav bar centered */

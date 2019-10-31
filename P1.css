@@ -31,16 +31,19 @@ h1,h2,h3,h4,h5,h6{
   line-height:4rem
 }
 
-.page-section{  /* adds margin below nav bar */
+/*Creates a margin(a gap) below and on top of the white box*/
+.page-section{
   margin-top:5rem;margin-bottom:5rem
 }
 
 .section-heading{ /* white box second heading capital */
-  text-transform:uppercase
+
 }
 
 .section-heading .section-heading-upper{  /* white box first heading size */
   display:block;
+  position:relative;
+  top:-100px;
   font-size:1rem;
   font-weight:800
 }
@@ -48,7 +51,17 @@ h1,h2,h3,h4,h5,h6{
 .section-heading .section-heading-lower{  /* white box second heading size */
   display:block;
   position:relative;
-  top:-300px;
+  top:-5px;
+  font-size:3rem;
+  font-weight:100
+}
+
+/*One of the headings for the white box.  Put it on the left side*/
+.section-heading .section-heading-lowerleft{
+  display:block;
+  position:relative;
+  top:-5px;
+  left:-5rem;
   font-size:3rem;
   font-weight:100
 }
@@ -87,7 +100,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .intro{     /* white box size */
-  position:relative
+  position:relative;
+  margin: auto;
 }
 
 @media (min-width:992px){ /* needed for formatting the white box */

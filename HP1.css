@@ -65,6 +65,7 @@ h1,h2,h3,h4,h5,h6{
 
 #mainNav .navbar-nav .nav-item.active .nav-link{  /* color of current link in nav bar */
   color:#e6a756
+
 }
 
 @media (min-width:992px){
