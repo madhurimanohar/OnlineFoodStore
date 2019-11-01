@@ -1,0 +1,30 @@
+/* This is an additional css file that helps format the shopping cart. */
+
+body{
+  font-family:Lora;
+  background-image:linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url(img/ofs.jpeg);
+  background-attachment:fixed;
+  background-position:center;
+  background-size:cover
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:Raleway
+}
+
+button[class*=btn] {
+  width: 30%;
+  height: 30%;
+  background-color: #E1E8EE;
+  border-radius: 6%;
+  border: 6%;
+  cursor: pointer;
+}
+
+.minus-btn img {    /* moves the minus button up/down */
+  margin-bottom: 0%;
+}
+
+.plus-btn img {   /* moves the plus button up/down */
+  margin-top: 0%;
+}

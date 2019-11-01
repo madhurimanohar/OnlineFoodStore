@@ -1,0 +1,129 @@
+/* BOOTSTRAP CODE START */
+
+body{
+  font-family:Lora;
+  background-image:linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url(img/ofs.jpeg);
+  background-attachment:fixed;
+  background-position:center;
+  background-size:cover
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:Raleway
+}
+
+.site-heading{  /* adds margin above heading */
+  margin-top:5rem;margin-bottom:5rem;
+  text-transform:uppercase;
+  line-height:1;
+  font-family:Raleway
+}
+
+.site-heading .site-heading-upper{  /* seperates headings */
+  display:block;
+  font-size:2rem;
+  font-weight:800
+}
+
+.site-heading .site-heading-lower{  /* font size for heading */
+  font-size:5rem;
+  font-weight:100;
+  line-height:4rem
+}
+
+.page-section{  /* adds margin below nav bar */
+  margin-top:5rem;margin-bottom:5rem
+}
+
+.section-heading{ /* white box second heading capital */
+  text-transform:uppercase
+}
+
+.section-heading .section-heading-upper{  /* white box first heading size */
+  display:block;font-size:1rem;
+  font-weight:800
+}
+
+.section-heading .section-heading-lower{  /* white box second heading size */
+  display:block;font-size:3rem;
+  font-weight:100
+}
+
+.bg-faded{  /*creates white box */
+  background-color:rgba(255,255,255,.85)
+}
+
+#mainNav{ /* creates nav bar */
+  background-color:rgba(47,23,15,.9);
+  font-family:Raleway
+}
+
+#mainNav .navbar-nav .nav-item .nav-link{ /* color of links in nav bar */
+  color:rgba(255,255,255,.7);
+  font-weight:800
+}
+
+#mainNav .navbar-nav .nav-item.active .nav-link{  /* color of current link in nav bar */
+  color:#e6a756
+
+}
+
+@media (min-width:992px){
+  #mainNav .navbar-nav .nav-item .nav-link:hover{ /* color for hover in nav bar */
+    color:rgba(255,255,255,.4)
+  }
+}
+
+.btn-xl{          /* creates the start shopping button */
+  font-weight:700;
+  font-size:.8rem;
+  padding-top:1.5rem;
+  padding-bottom:1.5rem;
+  padding-left:2rem;
+  padding-right:2rem
+}
+
+.intro{     /* white box size */
+  position:relative
+}
+
+@media (min-width:992px){ /* needed for formatting the whote box */
+  .intro .intro-img{
+    width:75%;
+    float:right
+  }
+  .intro .intro-text{
+    left:0;
+    width:60%;
+    margin-top:3rem;
+    position:absolute
+  }
+  .intro .intro-text .intro-button{
+    width:100%;
+    left:0;
+    position:absolute;bottom:-2rem
+  }
+}
+
+@media (min-width:1200px){  /* reduces the length of white box */
+  .intro .intro-text{
+    width:45%
+  }
+}
+
+.btn{         /*color of start shoppiong button */
+  box-shadow:0 3px 3px 0 rgba(33,37,41,.1)}.btn-primary{
+    background-color:#e6a756;
+    border-color:#e6a756
+}
+
+.btn-primary:active,.btn-primary:focus,.btn-primary:hover{  /*color of start shoppiong button when hovered over */
+  background-color:#df902a;
+  border-color:#df902a
+}
+
+.font-weight-light{
+  font-weight:100!important
+}
+
+/* BOOTSTRAP CODE END */
