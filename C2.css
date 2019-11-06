@@ -68,7 +68,7 @@ a {     /* removes underline from nav bar links */
   text-decoration: none;
 }
 
-.navbar-nav {                   /*has the links in nav bar in a single line */
+.navbar-nav {                   /* has the links in nav bar in a single line */
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -78,7 +78,7 @@ a {     /* removes underline from nav bar links */
   list-style: none;
 }
 
-@media (min-width: 992px) {   /*need this but go through in the end */
+@media (min-width: 992px) {   /* need this but go through in the end */
   .navbar-expand-lg {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;

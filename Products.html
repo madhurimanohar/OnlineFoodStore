@@ -29,7 +29,6 @@
       grid-template-columns: repeat(3,2fr);
       grid-auto-rows:auto;
       grid-gap:1rem;
-      overflow:auto;
     }
 
   .flip-card {
@@ -104,6 +103,9 @@
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="Cart.html">Cart</a>
           </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="Login.html">Login/Sign Up</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -124,38 +126,105 @@
             <article class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="img/Apple.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  <img src="img/Fruits/Apple.jpg" alt="Avatar" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                  <h1>Apple</h1>
-                  <p>Price: $.$$</p>
+                  <span id="AppleP"><h1>Apple</h1></span>
+                  <span><p>Price: $.$$</p></span>
                   <p>Weight #.##lbs</p>
+                  <div class="product-button-meats">
+                    <!--###############Needs to run a script###############-->
+
+                    <!--  THIS SECTION IS AWKWARD AND I NEED TO FIX IT SORRY -->
+
+                    <button id="Apple" class="btn btn-primary btn-xl" onclick="addItem()" value="Apple">Add to Cart</button>
+
+                    <script src="Products.js"></script>
+                    <script>
+                      //var total = 0;
+
+                      /*for(var i = 0; i < name.lenth; i++) {
+                        total += quantity[i] * price[i];
+                        cartData += "<tr><td>" + name[i] + "</td><td>" + quantity[i] +
+                        "</td><td>" + price[i] + "</td><td>" + quantity[i] * price[i] +
+                        "</td></tr>";
+                      }*/
+                  //  }
+
+                    </script>
+
+                    <!-- END OF "THIS SECTION IS AWKWARD AND I NEED TO FIX IT SORRY" -->
+
+                  </div>
                 </div>
               </div>
             </article>
         <article class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/Banana.jpeg" alt="Avatar" style="width:300px;height:300px;">
+              <img src="img/Fruits/Banana.jpeg" alt="Avatar" style="width:300px;height:300px;">
             </div>
             <div class="flip-card-back">
               <h1>Banana</h1>
               <p>Price: $.$$</p>
               <p>Weight #.##lbs</p>
+              <!--###############Needs to run a script###############-->
+              <a class="btn btn-primary btn-xl">Add to Cart</a>
             </div>
           </div>
         </article>
         <article class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/Pear.jpg" alt="Avatar" style="width:300px;height:300px;">
+              <img src="img/Fruits/Pear.jpg" alt="Avatar" style="width:300px;height:300px;">
             </div>
             <div class="flip-card-back">
               <h1>Pear</h1>
               <p>Price: $.$$</p>
               <p>Weight #.##lbs</p>
+              <!--###############Needs to run a script###############-->
+              <a class="btn btn-primary btn-xl">Add to Cart</a>
             </div>
           </article>
+          <article class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/Fruits/mango.jpg" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Mango</h1>
+                <p>Price: $.$$</p>
+                <p>Weight #.##lbs</p>
+                <!--###############Needs to run a script###############-->
+                <a class="btn btn-primary btn-xl">Add to Cart</a>
+              </div>
+            </article>
+            <article class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="img/Fruits/strawberry.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                  <h1>Strawberry</h1>
+                  <p>Price: $.$$</p>
+                  <p>Weight #.##lbs</p>
+                  <!--###############Needs to run a script###############-->
+                  <a class="btn btn-primary btn-xl">Add to Cart</a>
+                </div>
+              </article>
+              <article class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="img/Fruits/pineapple.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Pineapple</h1>
+                    <p>Price: $.$$</p>
+                    <p>Weight #.##lbs</p>
+                    <!--###############Needs to run a script###############-->
+                    <a class="btn btn-primary btn-xl">Add to Cart</a>
+                  </div>
+                </article>
         </section>
         <!--cards end-->
 
@@ -168,7 +237,7 @@
           <article class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="img/Celery.jpg" alt="Avatar" style="width:300px;height:300px;">
+                <img src="img/Vegetables/Celery.jpg" alt="Avatar" style="width:300px;height:300px;">
               </div>
               <div class="flip-card-back">
                 <h1>Celery</h1>
@@ -180,7 +249,7 @@
       <article class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img/Carrot.jpg" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img/Vegetables/Carrot.jpg" alt="Avatar" style="width:300px;height:300px;">
           </div>
           <div class="flip-card-back">
             <h1>Carrot</h1>
@@ -192,7 +261,7 @@
       <article class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img/Broccoli.jpg" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img/Vegetables/Broccoli.jpg" alt="Avatar" style="width:300px;height:300px;">
           </div>
           <div class="flip-card-back">
             <h1>Broccoli</h1>
@@ -200,6 +269,39 @@
             <p>Weight #.##lbs</p>
           </div>
         </article>
+        <article class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/Vegetables/potato.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Potato</h1>
+              <p>Price: $.$$</p>
+              <p>Weight #.##lbs</p>
+            </div>
+          </article>
+          <article class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/Vegetables/lettuce.jpg" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Lettuce</h1>
+                <p>Price: $.$$</p>
+                <p>Weight #.##lbs</p>
+              </div>
+            </article>
+            <article class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="img/Vegetables/onion.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                  <h1>Onion</h1>
+                  <p>Price: $.$$</p>
+                  <p>Weight #.##lbs</p>
+                </div>
+              </article>
       </section>
       <!--cards end-->
 
@@ -211,7 +313,7 @@
         <article class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+              <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
             </div>
             <div class="flip-card-back">
               <h1>Ribeye</h1>
@@ -223,7 +325,55 @@
     <article class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="img/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+          <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Ribeye</h1>
+          <p>Price: $.$$</p>
+          <p>Weight #.##lbs</p>
+        </div>
+      </div>
+    </article>
+    <article class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Ribeye</h1>
+          <p>Price: $.$$</p>
+          <p>Weight #.##lbs</p>
+        </div>
+      </div>
+    </article>
+    <article class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Ribeye</h1>
+          <p>Price: $.$$</p>
+          <p>Weight #.##lbs</p>
+        </div>
+      </div>
+    </article>
+    <article class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Ribeye</h1>
+          <p>Price: $.$$</p>
+          <p>Weight #.##lbs</p>
+        </div>
+      </div>
+    </article>
+    <article class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
         </div>
         <div class="flip-card-back">
           <h1>Ribeye</h1>
@@ -237,10 +387,16 @@
       </div>
     </div>
     <!--End of Intro-->
+
+
+
+
   </section>
 
 </body>
 
 </html>
+
+
 
 <!-- BOOTSTRAP CODE END -->

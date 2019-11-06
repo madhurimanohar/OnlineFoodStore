@@ -111,13 +111,13 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
-.btn{         /*color of start shoppiong button */
+.btn{         /*color of start shopping button */
   box-shadow:0 3px 3px 0 rgba(33,37,41,.1)}.btn-primary{
     background-color:#e6a756;
     border-color:#e6a756
 }
 
-.btn-primary:active,.btn-primary:focus,.btn-primary:hover{  /*color of start shoppiong button when hovered over */
+.btn-primary:active,.btn-primary:focus,.btn-primary:hover{  /*color of start shopping button when hovered over */
   background-color:#df902a;
   border-color:#df902a
 }
