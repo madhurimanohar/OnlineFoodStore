@@ -26,15 +26,16 @@
     .cards {
       display:grid;
       padding: 2rem;
-      grid-template-columns: repeat(3,2fr);
+      grid-template-columns: repeat(4,1fr);
       grid-auto-rows:auto;
       grid-gap:1rem;
+      justify-content: center;
     }
 
   .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     perspective: 1000px;
   }
 
@@ -87,9 +88,6 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item px-lg-4">
@@ -104,12 +102,39 @@
             <a class="nav-link text-uppercase text-expanded" href="Cart.html">Cart</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="Login.html">Login/Sign Up</a>
+            <a class="nav-link text-uppercase text-expanded" href="Login.html">Login / Sign Up</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
+
+  <!--SIDE MENU START FOR AUTO SCROLLING TO EACH SECTION-->
+  <button onclick="scrollFruit()" style="position:fixed;">Click me to scroll to the Fruit Section!</button>
+  <br>
+  <button onclick="scrollVegetable()" style="position:fixed;">Click me to scroll to the Vegetable Section!</button>
+  <br>
+  <button onclick="scrollMeat()" style="position:fixed;">Click me to scroll to the Meat Section!</button>
+  <script>
+    function scrollMeat()
+    {
+      var positionMeat = document.getElementById("meatlogo");
+
+      positionMeat.scrollIntoView(true);
+    }
+    function scrollFruit()
+    {
+      var positionFruit = document.getElementById("FruitLogo");
+      positionFruit.scrollIntoView(true);
+    }
+    function scrollVegetable()
+    {
+      var positionVegetable= document.getElementById("VegetableLogo");
+      positionVegetable.scrollIntoView(true);
+    }
+  </script>
+
 
   <section class="page-section clearfix">
     <div class="container">
@@ -118,267 +143,453 @@
           <h2 class="section-heading mb-4">
             <span class="section-heading-lower text-center">PRODUCTS</span>
           </h2>
+          <!--Start of the Fruit Card Grid-->
           <h3 class="section-heading mb-4">
-            <span class="section-heading-lowerleft text-left">Fruits</span>
+            <span id="FruitLogo" class="section-heading-lowerleft text-left">Fruits</span>
           </h3>
           <!--CARDS START-->
           <section class ="cards">
             <article class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="img/Fruits/Apple.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  <img src="img/Fruits/Apple.jpg" alt="Avatar" style="width:250px;height:250px;">
                 </div>
                 <div class="flip-card-back">
-                  <span id="AppleP"><h1>Apple</h1></span>
-                  <span><p>Price: $.$$</p></span>
+                  <h1>Apple</h1>
+                  <p>Price: $.$$</p>
                   <p>Weight #.##lbs</p>
-                  <div class="product-button-meats">
+
+                  <button class="w3-button w3-teal">-</button>
+                  <input type="text" name="name" value="1" size="5">
+                  <button class="w3-button w3-teal">+</button>
+                  <br><br>
+
                     <!--###############Needs to run a script###############-->
+                    <a class="btn btn-primary">Add to Cart</a>
 
-                    <!--  THIS SECTION IS AWKWARD AND I NEED TO FIX IT SORRY -->
-
-                    <button id="Apple" class="btn btn-primary btn-xl" onclick="addItem()" value="Apple">Add to Cart</button>
-
-                    <script src="Products.js"></script>
-                    <script>
-                      //var total = 0;
-
-                      /*for(var i = 0; i < name.lenth; i++) {
-                        total += quantity[i] * price[i];
-                        cartData += "<tr><td>" + name[i] + "</td><td>" + quantity[i] +
-                        "</td><td>" + price[i] + "</td><td>" + quantity[i] * price[i] +
-                        "</td></tr>";
-                      }*/
-                  //  }
-
-                    </script>
-
-                    <!-- END OF "THIS SECTION IS AWKWARD AND I NEED TO FIX IT SORRY" -->
-
-                  </div>
                 </div>
               </div>
             </article>
         <article class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/Fruits/Banana.jpeg" alt="Avatar" style="width:300px;height:300px;">
+              <img src="img/Fruits/Banana.jpeg" alt="Avatar" style="width:250px;height:250px;">
             </div>
             <div class="flip-card-back">
               <h1>Banana</h1>
               <p>Price: $.$$</p>
               <p>Weight #.##lbs</p>
-              <!--###############Needs to run a script###############-->
-              <a class="btn btn-primary btn-xl">Add to Cart</a>
+              <button class="w3-button w3-teal">-</button>
+              <input type="text" name="name" value="1" size="5">
+              <button class="w3-button w3-teal">+</button>
+              <br><br>
+
+                <!--###############Needs to run a script###############-->
+                <a class="btn btn-primary">Add to Cart</a>
             </div>
           </div>
         </article>
         <article class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/Fruits/Pear.jpg" alt="Avatar" style="width:300px;height:300px;">
+              <img src="img/Fruits/Pear.jpg" alt="Avatar" style="width:250px;height:250px;">
             </div>
             <div class="flip-card-back">
               <h1>Pear</h1>
               <p>Price: $.$$</p>
               <p>Weight #.##lbs</p>
-              <!--###############Needs to run a script###############-->
-              <a class="btn btn-primary btn-xl">Add to Cart</a>
+              <button class="w3-button w3-teal">-</button>
+              <input type="text" name="name" value="1" size="5">
+              <button class="w3-button w3-teal">+</button>
+              <br><br>
+
+                <!--###############Needs to run a script###############-->
+                <a class="btn btn-primary">Add to Cart</a>
             </div>
           </article>
           <article class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="img/Fruits/mango.jpg" alt="Avatar" style="width:300px;height:300px;">
+                <img src="img/Fruits/mango.jpg" alt="Avatar" style="width:250px;height:250px;">
               </div>
               <div class="flip-card-back">
                 <h1>Mango</h1>
                 <p>Price: $.$$</p>
                 <p>Weight #.##lbs</p>
-                <!--###############Needs to run a script###############-->
-                <a class="btn btn-primary btn-xl">Add to Cart</a>
+                <button class="w3-button w3-teal">-</button>
+                <input type="text" name="name" value="1" size="5">
+                <button class="w3-button w3-teal">+</button>
+                <br><br>
+
+                  <!--###############Needs to run a script###############-->
+                  <a class="btn btn-primary">Add to Cart</a>
               </div>
             </article>
             <article class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="img/Fruits/strawberry.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  <img src="img/Fruits/strawberry.jpg" alt="Avatar" style="width:250px;height:250px;">
                 </div>
                 <div class="flip-card-back">
                   <h1>Strawberry</h1>
                   <p>Price: $.$$</p>
                   <p>Weight #.##lbs</p>
-                  <!--###############Needs to run a script###############-->
-                  <a class="btn btn-primary btn-xl">Add to Cart</a>
+                  <button class="w3-button w3-teal">-</button>
+                  <input type="text" name="name" value="1" size="5">
+                  <button class="w3-button w3-teal">+</button>
+                  <br><br>
+
+                    <!--###############Needs to run a script###############-->
+                    <a class="btn btn-primary">Add to Cart</a>
                 </div>
               </article>
               <article class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
-                    <img src="img/Fruits/pineapple.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    <img src="img/Fruits/pineapple.jpg" alt="Avatar" style="width:250px;height:250px;">
                   </div>
                   <div class="flip-card-back">
                     <h1>Pineapple</h1>
                     <p>Price: $.$$</p>
                     <p>Weight #.##lbs</p>
-                    <!--###############Needs to run a script###############-->
-                    <a class="btn btn-primary btn-xl">Add to Cart</a>
+                    <button class="w3-button w3-teal">-</button>
+                    <input type="text" name="name" value="1" size="5">
+                    <button class="w3-button w3-teal">+</button>
+                    <br><br>
+
+                      <!--###############Needs to run a script###############-->
+                      <a class="btn btn-primary">Add to Cart</a>
                   </div>
                 </article>
+                <article class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="img/Fruits/peach.jpg" alt="Avatar" style="width:250px;height:250px;">
+                    </div>
+                    <div class="flip-card-back">
+                      <h1>Peach</h1>
+                      <p>Price: $.$$</p>
+                      <p>Weight #.##lbs</p>
+                      <button class="w3-button w3-teal">-</button>
+                      <input type="text" name="name" value="1" size="5">
+                      <button class="w3-button w3-teal">+</button>
+                      <br><br>
+
+                        <!--###############Needs to run a script###############-->
+                        <a class="btn btn-primary">Add to Cart</a>
+                    </div>
+                  </article>
+                  <article class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="img/Fruits/watermelon.jpg" alt="Avatar" style="width:250px;height:250px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Watermelon</h1>
+                        <p>Price: $.$$</p>
+                        <p>Weight #.##lbs</p>
+                        <button class="w3-button w3-teal">-</button>
+                        <input type="text" name="name" value="1" size="5">
+                        <button class="w3-button w3-teal">+</button>
+                        <br><br>
+
+                          <!--###############Needs to run a script###############-->
+                          <a class="btn btn-primary">Add to Cart</a>
+                      </div>
+                    </article>
         </section>
         <!--cards end-->
 
         <!--VEGETABLES-->
         <h3 class="section-heading mb-4">
-          <span class="section-heading-lowerleft text-left">Vegetables</span>
+          <span id="VegetableLogo" class="section-heading-lowerleft text-left">Vegetables</span>
         </h3>
         <!--CARDS START-->
         <section class ="cards">
           <article class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="img/Vegetables/Celery.jpg" alt="Avatar" style="width:300px;height:300px;">
+                <img src="img/Vegetables/Celery.jpg" alt="Avatar" style="width:250px;height:250px;">
               </div>
               <div class="flip-card-back">
                 <h1>Celery</h1>
                 <p>Price: $.$$</p>
                 <p>Weight #.##lbs</p>
+                <button class="w3-button w3-teal">-</button>
+                <input type="text" name="name" value="1" size="5">
+                <button class="w3-button w3-teal">+</button>
+                <br><br>
+
+                  <!--###############Needs to run a script###############-->
+                  <a class="btn btn-primary">Add to Cart</a>
               </div>
             </div>
           </article>
       <article class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img/Vegetables/Carrot.jpg" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img/Vegetables/Carrot.jpg" alt="Avatar" style="width:250px;height:250px;">
           </div>
           <div class="flip-card-back">
             <h1>Carrot</h1>
             <p>Price: $.$$</p>
             <p>Weight #.##lbs</p>
+            <button class="w3-button w3-teal">-</button>
+            <input type="text" name="name" value="1" size="5">
+            <button class="w3-button w3-teal">+</button>
+            <br><br>
+
+              <!--###############Needs to run a script###############-->
+              <a class="btn btn-primary">Add to Cart</a>
           </div>
         </div>
       </article>
       <article class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img/Vegetables/Broccoli.jpg" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img/Vegetables/Broccoli.jpg" alt="Avatar" style="width:250px;height:250px;">
           </div>
           <div class="flip-card-back">
             <h1>Broccoli</h1>
             <p>Price: $.$$</p>
             <p>Weight #.##lbs</p>
+            <button class="w3-button w3-teal">-</button>
+            <input type="text" name="name" value="1" size="5">
+            <button class="w3-button w3-teal">+</button>
+            <br><br>
+
+              <!--###############Needs to run a script###############-->
+              <a class="btn btn-primary">Add to Cart</a>
           </div>
         </article>
         <article class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/Vegetables/potato.jpg" alt="Avatar" style="width:300px;height:300px;">
+              <img src="img/Vegetables/potato.jpg" alt="Avatar" style="width:250px;height:250px;">
             </div>
             <div class="flip-card-back">
               <h1>Potato</h1>
               <p>Price: $.$$</p>
               <p>Weight #.##lbs</p>
+              <button class="w3-button w3-teal">-</button>
+              <input type="text" name="name" value="1" size="5">
+              <button class="w3-button w3-teal">+</button>
+              <br><br>
+
+                <!--###############Needs to run a script###############-->
+                <a class="btn btn-primary">Add to Cart</a>
             </div>
           </article>
           <article class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="img/Vegetables/lettuce.jpg" alt="Avatar" style="width:300px;height:300px;">
+                <img src="img/Vegetables/lettuce.jpg" alt="Avatar" style="width:250px;height:250px;">
               </div>
               <div class="flip-card-back">
                 <h1>Lettuce</h1>
                 <p>Price: $.$$</p>
                 <p>Weight #.##lbs</p>
+                <button class="w3-button w3-teal">-</button>
+                <input type="text" name="name" value="1" size="5">
+                <button class="w3-button w3-teal">+</button>
+                <br><br>
+
+                  <!--###############Needs to run a script###############-->
+                  <a class="btn btn-primary">Add to Cart</a>
               </div>
             </article>
             <article class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="img/Vegetables/onion.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  <img src="img/Vegetables/onion.jpg" alt="Avatar" style="width:250px;height:250px;">
                 </div>
                 <div class="flip-card-back">
                   <h1>Onion</h1>
                   <p>Price: $.$$</p>
                   <p>Weight #.##lbs</p>
+                  <button class="w3-button w3-teal">-</button>
+                  <input type="text" name="name" value="1" size="5">
+                  <button class="w3-button w3-teal">+</button>
+                  <br><br>
+
+                    <!--###############Needs to run a script###############-->
+                    <a class="btn btn-primary">Add to Cart</a>
                 </div>
               </article>
+              <article class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="img/Vegetables/BellPepper.jpg" alt="Avatar" style="width:250px;height:250px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Bell Pepper</h1>
+                    <p>Price: $.$$</p>
+                    <p>Weight #.##lbs</p>
+                    <button class="w3-button w3-teal">-</button>
+                    <input type="text" name="name" value="1" size="5">
+                    <button class="w3-button w3-teal">+</button>
+                    <br><br>
+
+                      <!--###############Needs to run a script###############-->
+                      <a class="btn btn-primary">Add to Cart</a>
+                  </div>
+                </article>
+                <article class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="img/Vegetables/corn.jpg" alt="Avatar" style="width:250px;height:250px;">
+                    </div>
+                    <div class="flip-card-back">
+                      <h1>Corn</h1>
+                      <p>Price: $.$$</p>
+                      <p>Weight #.##lbs</p>
+                      <button class="w3-button w3-teal">-</button>
+                      <input type="text" name="name" value="1" size="5">
+                      <button class="w3-button w3-teal">+</button>
+                      <br><br>
+
+                        <!--###############Needs to run a script###############-->
+                        <a class="btn btn-primary">Add to Cart</a>
+                    </div>
+                  </article>
       </section>
       <!--cards end-->
 
       <h3 class="section-heading mb-4">
-        <span class="section-heading-lowerleft text-left">Meats</span>
+        <span id= "meatlogo" class="section-heading-lowerleft text-left">Meats</span>
       </h3>
       <!--CARDS START-->
       <section class ="cards">
         <article class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+              <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:250px;height:250px;">
             </div>
             <div class="flip-card-back">
               <h1>Ribeye</h1>
               <p>Price: $.$$</p>
               <p>Weight #.##lbs</p>
+              <button class="w3-button w3-teal">-</button>
+              <input type="text" name="name" value="1" size="5">
+              <button class="w3-button w3-teal">+</button>
+              <br><br>
+
+                <!--###############Needs to run a script###############-->
+                <a class="btn btn-primary">Add to Cart</a>
             </div>
           </div>
         </article>
     <article class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+          <img src="img/Meats/ChickenBreast.jpg" alt="Avatar" style="width:250px;height:250px;">
         </div>
         <div class="flip-card-back">
-          <h1>Ribeye</h1>
+          <h1>Chicken Breast</h1>
           <p>Price: $.$$</p>
           <p>Weight #.##lbs</p>
+          <button class="w3-button w3-teal">-</button>
+          <input type="text" name="name" value="1" size="5">
+          <button class="w3-button w3-teal">+</button>
+          <br><br>
+
+            <!--###############Needs to run a script###############-->
+            <a class="btn btn-primary">Add to Cart</a>
         </div>
       </div>
     </article>
     <article class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+          <img src="img/Meats/porkchops.png" alt="Avatar" style="width:250px;height:250px;">
         </div>
         <div class="flip-card-back">
-          <h1>Ribeye</h1>
+          <h1>Porkchops</h1>
           <p>Price: $.$$</p>
           <p>Weight #.##lbs</p>
+          <button class="w3-button w3-teal">-</button>
+          <input type="text" name="name" value="1" size="5">
+          <button class="w3-button w3-teal">+</button>
+          <br><br>
+
+            <!--###############Needs to run a script###############-->
+            <a class="btn btn-primary">Add to Cart</a>
         </div>
       </div>
     </article>
     <article class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+          <img src="img/Meats/chickenlegs.jpg" alt="Avatar" style="width:250px;height:250px;">
         </div>
         <div class="flip-card-back">
-          <h1>Ribeye</h1>
+          <h1>Chicken Legs</h1>
           <p>Price: $.$$</p>
           <p>Weight #.##lbs</p>
+          <button class="w3-button w3-teal">-</button>
+          <input type="text" name="name" value="1" size="5">
+          <button class="w3-button w3-teal">+</button>
+          <br><br>
+
+            <!--###############Needs to run a script###############-->
+            <a class="btn btn-primary">Add to Cart</a>
         </div>
       </div>
     </article>
     <article class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+          <img src="img/Meats/salmon.jpg" alt="Avatar" style="width:250px;height:250px;">
         </div>
         <div class="flip-card-back">
-          <h1>Ribeye</h1>
+          <h1>Salmon</h1>
           <p>Price: $.$$</p>
           <p>Weight #.##lbs</p>
+          <button class="w3-button w3-teal">-</button>
+          <input type="text" name="name" value="1" size="5">
+          <button class="w3-button w3-teal">+</button>
+          <br><br>
+
+            <!--###############Needs to run a script###############-->
+            <a class="btn btn-primary">Add to Cart</a>
         </div>
       </div>
     </article>
     <article class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="img/Meats/Ribeye.jpg" alt="Avatar" style="width:300px;height:300px;">
+          <img src="img/Meats/LambLeg.jpg" alt="Avatar" style="width:250px;height:250px;">
         </div>
         <div class="flip-card-back">
-          <h1>Ribeye</h1>
+          <h1>Lamb Leg</h1>
           <p>Price: $.$$</p>
           <p>Weight #.##lbs</p>
+          <button class="w3-button w3-teal">-</button>
+          <input type="text" name="name" value="1" size="5">
+          <button class="w3-button w3-teal">+</button>
+          <br><br>
+
+            <!--###############Needs to run a script###############-->
+            <a class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </article>
+    <article class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="img/Meats/PorkBelly.jpg" alt="Avatar" style="width:250px;height:250px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Pork Belly</h1>
+          <p>Price: $.$$</p>
+          <p>Weight #.##lbs</p>
+          <button class="w3-button w3-teal">-</button>
+          <input type="text" name="name" value="1" size="5">
+          <button class="w3-button w3-teal">+</button>
+          <br><br>
+
+            <!--###############Needs to run a script###############-->
+            <a class="btn btn-primary">Add to Cart</a>
         </div>
       </div>
     </article>
@@ -387,16 +598,10 @@
       </div>
     </div>
     <!--End of Intro-->
-
-
-
-
   </section>
 
 </body>
 
 </html>
-
-
 
 <!-- BOOTSTRAP CODE END -->

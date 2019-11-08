@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Sign Up</title>
+  <title>Sign Up / Login</title>
 
   <!-- Bootstrap core CSS -->
   <link href="HP2.css" rel="stylesheet">
@@ -48,7 +48,7 @@
             <a class="nav-link text-uppercase text-expanded" href="Cart.html">Cart</a>
           </li>
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="Login.html">Login/Sign Up</a>
+            <a class="nav-link text-uppercase text-expanded" href="signup.html">Login / Sign Up</a>
           </li>
         </ul>
       </div>
@@ -62,21 +62,36 @@
           <h2 class="section-heading mb-4">
             <span class="section-heading-lower">Sign Up</span>
           </h2>
-          <h1> Create an account! </h1>
-          <form action = "login.php" method = "post">
-            Username:
-            <input type ="text" name = "username" /> <br><br>
-              Password:
-            <input type = "password" name = "password" /> <br><br>
-            <div class = "submitbutton">
-              <input type = "submit" name = "submit" />
-            </div>
-          </form>
+		  <h1> Create an account! </h1>
+		  <form action = "signup.php" method = "post">
+			  Username:
+	  		<input type ="text" name = "username" /> <br><br>
+			  Password:
+	  		<input type = "password" name = "password" /> <br><br>
+			<div class = "re-enter">
+			  Re-enter Password:
+			  <input type = "password" name = "repassword" /><br><br>
+		  </div>
+	  		<input type = "submit" name = "submit" />
+	  	</form>
+         <hr>
+		 <h2 class="section-heading mb-4">
+			 <span class="section-heading-lower">Login</span>
+		 </h2>
+		 <h1> Sign in to your account! </h1>
+		 <form action = "login.php" method = "post">
+			 Username:
+		   <input type ="text" name = "username" /> <br><br>
+			 Password:
+		   <input type = "password" name = "password" /> <br><br>
+		   <input type = "submit" name = "submit" />
+	   </form>
         </div> <!-- this div ends the white box, add it at the end of the cart -->
       </div>
-    </section>
-  </body>
-  
+    </div>
+  </section>
+</body>
+
 </html>
 
-  <!-- BOOTSTRAP CODE END -->
+<!-- BOOTSTRAP CODE END -->
