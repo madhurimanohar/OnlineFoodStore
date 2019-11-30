@@ -128,9 +128,35 @@
     <span class="site-heading-lower">INSERT STORE NAME</span>
   </h1>
 
-  <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
-    <h1> <font color="white">Complete Checkout</font></h1>
+  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="HomePage.html">Home
+            </a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="Products.html">Products</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="Cart.html">Cart</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="ProfilePage.html">Profile</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="Login.html">Login / Sign Up</a>
+          </li>
+        </ul>
+      </div>
   </nav>
+
+
 
   <div class="row">
     <div class="col-75">
@@ -222,7 +248,9 @@
           <label>
             <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
           </label>
-          <input type="submit" value="Checkout" class="btn">
+          <div class="intro-button">
+            <a class="btn btn-primary btn-xl" href="Login.html">Checkout!</a>
+          </div>
         </form>
       </div>
     </div>
