@@ -32,7 +32,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .page-section{  /* adds margin below nav bar */
-  margin-top:5rem;margin-bottom:5rem
+  margin-top:5rem;
+  margin-bottom:5rem
 }
 
 .section-heading{ /* white box second heading capital */
@@ -40,14 +41,19 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .section-heading .section-heading-upper{  /* white box first heading size */
-  display:block;font-size:1rem;
+  display:block;
+  font-size:1rem;
   font-weight:800
 }
 
 .section-heading .section-heading-lower{  /* white box second heading size */
-  display:block;font-size:3rem;
+  display:block;
+  font-size:3rem;
   font-weight:100
 }
+
+
+
 
 .bg-faded{  /*creates white box */
   background-color:rgba(255,255,255,.85)
