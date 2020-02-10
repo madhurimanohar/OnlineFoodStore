@@ -1,5 +1,15 @@
 <!-- BOOTSTRAP CODE START -->
 
+<?php
+	session_start();
+	if (isset($_SESSION['username'])) {
+		echo "<script>
+			alert('You are already logged in.');
+			window.location.href='HomePage.php';
+			</script>";
+	}
+ ?>
+
 <html lang="en">
 
 <head>
@@ -37,21 +47,24 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="HomePage.html">Home
+            <a class="nav-link text-uppercase text-expanded" href="HomePage.php">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="Products.html">Products</a>
+            <a class="nav-link text-uppercase text-expanded" href="Products.php">Products</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="Cart.html">Cart</a>
+            <a class="nav-link text-uppercase text-expanded" href="Cart.php">Cart</a>
           </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="ProfilePage.html">Profile</a>
+		  <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="ProfilePage.php">Profile</a>
           </li>
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="signup.html">Login / Sign Up</a>
+            <a class="nav-link text-uppercase text-expanded" href="login_signup.php">Sign Up / Login</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="logout.php">Logout</a>
           </li>
         </ul>
       </div>
@@ -75,19 +88,19 @@
 			  Re-enter Password:
 			  <input type = "password" name = "repassword" /><br><br>
 		  </div>
-	  		<input type = "submit" name = "submit" />
+	  		<input type = "submit" name = "submit-signup" />
 	  	</form>
          <hr>
 		 <h2 class="section-heading mb-4">
 			 <span class="section-heading-lower">Login</span>
 		 </h2>
 		 <h1> Sign in to your account! </h1>
-		 <form action = "login.php" method = "post">
+		 <form action = "signup.php" method = "post">
 			 Username:
 		   <input type ="text" name = "username" /> <br><br>
 			 Password:
 		   <input type = "password" name = "password" /> <br><br>
-		   <input type = "submit" name = "submit" />
+		   <input type = "submit" name = "submit-login" />
 	   </form>
         </div> <!-- this div ends the white box, add it at the end of the cart -->
       </div>

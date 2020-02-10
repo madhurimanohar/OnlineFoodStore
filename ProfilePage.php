@@ -1,6 +1,11 @@
 <!-- BOOTSTRAP CODE START -->
+<?php
+	session_start();
+	if (!isset($_SESSION['username'])) {
+		header('location: login_signup.php');
+	}
+?>
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -145,7 +150,7 @@
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Online Food Store</span>
-    <span class="site-heading-lower">INSERT STORE NAME</span>
+    <span class="site-heading-lower">Sun Valley Market</span>
   </h1>
 
 
@@ -226,22 +231,25 @@ body {
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="HomePage.html">Home
+          <a class="nav-link text-uppercase text-expanded" href="HomePage.php">Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="Products.html">Products</a>
+          <a class="nav-link text-uppercase text-expanded" href="Products.php">Products</a>
         </li>
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="Cart.html">Cart</a>
+          <a class="nav-link text-uppercase text-expanded" href="Cart.php">Cart</a>
         </li>
         <li class="nav-item active px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="ProfilePage.html">Profile</a>
+          <a class="nav-link text-uppercase text-expanded" href="ProfilePage.php">Profile</a>
         </li>
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="Login.html">Login / Sign Up</a>
+          <a class="nav-link text-uppercase text-expanded" href="login_signup.php">Login / Sign Up</a>
         </li>
+		<li class="nav-item px-lg-4">
+		  <a class="nav-link text-uppercase text-expanded" href="logout.php">Logout</a>
+		</li>
       </ul>
     </div>
   </div>
@@ -256,12 +264,50 @@ body {
     <div class="intro">
       <div class="bg-faded p-5">
         <h2 class="section-heading mb-4">
-          <span class="section-heading-lower text-center">PROFILE</span>
+          <span class="section-heading-lower text-center">Welcome, <?php echo $_SESSION['username'] ?>.</span>
         </h2>
-        <h2 class="section-heading mb-4">
-          <span class="section-heading-lower text-center">Your Past Transactions</span>
+        <h2 class="section-heading mb-4	">
+          <span class="section-heading-lower">Here are your past transactions:</span>
         </h2>
-
+		<?php
+			$conn = mysqli_connect("localhost", "root", "", "dbtest");
+			if (!$conn) {
+				die("Connection failed: " . mysqli_connect_error());
+			}
+			$sql = "select * from transactions where username = '".$_SESSION['username']."'";
+			$result = $conn->query($sql);
+			$count = 1;
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) {
+					echo "Transaction ";
+					echo $count;
+					echo ":<br>";
+					$count = $count + 1;
+					foreach($row as $x => $x_value) {
+						if ($x_value != 0) {
+							echo "<center>";
+							echo $x;
+							echo " -> ";
+							echo $x_value;
+							if ($x == "wholemilk" || $x == "soymilk") {
+								echo " gallons<br>";
+							} else if ($x == "egg") {
+								echo " dozens<br>";
+							}
+							else {
+								echo " lbs<br>";
+							}
+							echo "</center>";
+						}
+					}
+				}
+			}
+			else {
+				echo "<center><h3>";
+				echo "You have no previous transactions. Buy now!";
+				echo "</center></h3>";
+			}
+		?>
 </html>
 
 <!-- BOOTSTRAP CODE END -->

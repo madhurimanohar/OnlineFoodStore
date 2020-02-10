@@ -27,7 +27,7 @@
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Online Food Store</span>
-    <span class="site-heading-lower">INSERT STORE NAME</span>
+    <span class="site-heading-lower">Sun Valley Market</span>
   </h1>
 
   <!-- Navigation -->

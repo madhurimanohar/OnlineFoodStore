@@ -74,6 +74,20 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
+#mainNav .navbar-nav .nav-item .nav-link .nav-left {
+  float: left;
+}
+
+#mainNav{ /* creates nav bar */
+  width: 100%;
+  height: 35px;
+  background-color:rgba(47,23,15,.9);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  font-family:Raleway
+}
+
 @media (min-width:992px){
   #mainNav .navbar-nav .nav-item .nav-link:hover{ /* color for hover in nav bar */
     color:rgba(255,255,255,.4)

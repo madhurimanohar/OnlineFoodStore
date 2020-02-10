@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+	session_start();
+?>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -125,64 +129,65 @@
 <body>
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Online Food Store</span>
-    <span class="site-heading-lower">INSERT STORE NAME</span>
+    <span class="site-heading-lower">Sun Valley Market</span>
   </h1>
 
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="HomePage.html">Home
-            </a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="Products.html">Products</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="Cart.html">Cart</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="ProfilePage.html">Profile</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="Login.html">Login / Sign Up</a>
-          </li>
-        </ul>
-      </div>
+ 	 <div class="collapse navbar-collapse" id="navbarResponsive">
+ 	   <ul class="navbar-nav mx-auto">
+ 		 <li class="nav-item px-lg-4">
+ 		   <a class="nav-link text-uppercase text-expanded" href="HomePage.php">Home
+ 			 <span class="sr-only">(current)</span>
+ 		   </a>
+ 		 </li>
+ 		 <li class="nav-item px-lg-4">
+ 		   <a class="nav-link text-uppercase text-expanded" href="Products.php">Products</a>
+ 		 </li>
+ 		 <li class="nav-item px-lg-4">
+ 		   <a class="nav-link text-uppercase text-expanded" href="Cart.php">Cart</a>
+ 		 </li>
+ 		 <li class="nav-item px-lg-4">
+ 		   <a class="nav-link text-uppercase text-expanded" href="ProfilePage.php">Profile</a>
+ 		 </li>
+ 		 <li class="nav-item px-lg-4">
+ 		   <a class="nav-link text-uppercase text-expanded" href="login_signup.php">Sign Up / Login</a>
+ 		 </li>
+ 		 <li class="nav-item px-lg-4">
+ 		   <a class="nav-link text-uppercase text-expanded" href="logout.php">Logout</a>
+ 		 </li>
+ 	   </ul>
+ 	 </div>
   </nav>
-
-
+<br><br>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+    <h1> <font color="white">Complete Checkout</font></h1>
+  </nav> -->
 
   <div class="row">
     <div class="col-75">
       <div class="container">
-        <form action="/action_page.php">
+        <form action="finalCheckout.php" method = "post">
 
           <div class="row">
             <div class="col-50">
               <h3>Billing Address</h3>
               <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Frank Butt">
+              <input type="text" name="firstname" placeholder="Name">
               <label for="email"><i class="fa fa-envelope"></i> Email</label>
-              <input type="text" id="email" name="email" placeholder="frankbutt@sjsu.edu">
+              <input type="text" name="email" placeholder="Email">
               <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-              <input type="text" id="adr" name="address" placeholder="1 Washington Sq, San Jose, CA 95192">
+              <input type="text" name="address" placeholder="1 Washington Sq">
               <label for="city"><i class="fa fa-institution"></i> City</label>
-              <input type="text" id="city" name="city" placeholder="San Jose">
+              <input type="text" name="city" placeholder="San Jose">
 
               <div class="row">
                 <div class="col-50">
                   <label for="state">State</label>
-                  <input type="text" id="state" name="state" placeholder="Ca">
+                  <input type="text" name="state" placeholder="CA">
                 </div>
                 <div class="col-50">
                   <label for="zip">Zip</label>
-                  <input type="text" id="zip" name="zip" placeholder="95122">
+                  <input type="text" name="zip" placeholder="95122">
                 </div>
               </div>
             </div>
@@ -197,33 +202,33 @@
                 <i class="fa fa-cc-discover" style="color:orange;"></i>
               </div>
               <label for="cname">Name on Card</label>
-              <input type="text" id="cname" name="cardname" placeholder="Frank Butt">
+              <input type="text" name="cardname" placeholder="Name">
               <label for="ccnum">Credit card number</label>
-              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <input type="text" name="cardnumber">
               <label for="expmonth">Exp Month</label>
-              <input type="text" id="exp. month" name="expmonth" placeholder="November">
+              <input type="text" name="expmonth">
               <div class="row">
                 <div class="col-50">
                   <label for="expyear">Exp Year</label>
-                  <input type="text" id="expyear" name="expyear" placeholder="2020">
+                  <input type="text" name="expyear">
                 </div>
                 <div class="col-50">
                   <label for="cvv">CVV</label>
-                  <input type="text" id="cvv" name="cvv" placeholder="123">
+                  <input type="text" name="cvv">
                 </div>
               </div>
               <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-              <input type="text" id="adr" name="address" placeholder="1 Washington Sq, San Jose, CA 95192">
+              <input type="text" name="address" placeholder="1 Washington Sq">
               <label for="city"><i class="fa fa-institution"></i> City</label>
-              <input type="text" id="city" name="city" placeholder="San Jose">
+              <input type="text" name="city" placeholder="San Jose">
               <div class="row">
                 <div class="col-50">
                   <label for="state">State</label>
-                  <input type="text" id="state" name="state" placeholder="Ca">
+                  <input type="text" name="state" placeholder="CA">
                 </div>
                 <div class="col-50">
                   <label for="zip">Zip</label>
-                  <input type="text" id="zip" name="zip" placeholder="95122">
+                  <input type="text" name="zip" placeholder="95122">
                 </div>
               </div>
 
@@ -245,24 +250,39 @@
 
             </div>
           </div>
-          <label>
-            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-          </label>
-          <div class="intro-button">
-            <a class="btn btn-primary btn-xl" href="Login.html">Checkout!</a>
-          </div>
+          <input type="submit" value="Checkout" class="btn">
         </form>
       </div>
     </div>
     <div class="col-25">
       <div class="container">
-        <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i>#<b></b></span></h4>
-        <p><a href="#">Product 1</a> <span class="price">$</span></p>
-        <p><a href="#">Product 2</a> <span class="price">$</span></p>
-        <p><a href="#">Product 3</a> <span class="price">$</span></p>
-        <p><a href="#">Product 4</a> <span class="price">$</span></p>
+        <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b></b></span></h4>
+        <?php
+		$totalPrice = 0;
+		$totalWeight = 0;
+		foreach($_SESSION['products'] as $x => $x_value) {
+			if ($x_value != 0) {
+				$price = $_SESSION['prices'][$x] * $x_value;
+				$totalWeight = $_SESSION['products'][$x] + $totalWeight;
+				$totalPrice = $price + $totalPrice;
+				echo $x;
+				echo "<span class='price'>$";
+				echo "".$price;
+				echo "</span></p>";
+			}
+		}
+		$tax = 0.0925 * $totalPrice;
+		$totalPrice = $tax + $totalPrice;
+		?>
         <hr>
-        <p>Total <span class="price" style="color:black"><b>$</b></span></p>
+		<?php
+			if ($totalWeight > 20) {
+				echo "<b><p>Delivery Fee <span class='price' style='color:black'><b>$5";
+				$totalPrice = $totalPrice + 5;
+			}
+		 ?>
+        <p>Tax <span class="price" style="color:black"><b>$<?php echo "".round($tax, 2);?></b></span></p>
+        <p>Total <span class="price" style="color:black"><b>$<?php echo "".round($totalPrice,2)?></b></span></p>
       </div>
     </div>
   </div>
